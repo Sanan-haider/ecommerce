@@ -1,0 +1,302 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+.sidebarmenu h1{
+    font-size: 25px;
+
+}
+nav{
+    height: 80px;
+    background-color: #1b1b1b;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 50px 0px 100px;
+}
+nav .menu-btn i{
+    color: #fff;
+    font-size: 22px;
+    cursor: pointer;
+    display:none;
+}
+nav ul{
+    display: flex;
+    list-style: none;
+}
+nav ul li{
+    margin: 0 5px;
+}
+nav ul li a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    padding: 8px 4px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+nav ul li a:hover,
+nav ul li a.active
+{
+    background: #fff;
+    color: #1b1b1b;
+}
+
+nav .sidebarmenu{
+    font-size: 33px;
+    color: white;
+    font-weight: 600;
+}
+#click{
+    display: none;
+}
+.banner-image{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 80px;
+  
+}
+.banner-image img{
+    width: 40%;
+}
+.navig img{
+    width: 30px;
+    height: 20px;
+   
+}
+
+.txt{
+    width: 40%;
+    text-align: center;
+  
+}
+
+.txt h5{
+    background: #111;
+    border-radius: 10px;
+    color: #fff;
+    margin: 0px 80px 0px 80px;
+    padding: 6px;
+    
+}
+.txt p {
+    line-height: 2;
+}
+.txt h5:hover{
+    background: #43680c;
+}
+.mainfooter{
+    background: #1b1b1b;
+}
+.footer{
+    
+    display: flex;
+    padding: 50px;
+}
+.footerimg img{
+    width: 25%;
+    border-radius: 50%;
+  
+    
+}
+.footerimg p{
+    color: #fff;
+}
+.footerimg{
+    width:33% ;
+    position: relative;
+    top: -15px;
+    text-align: center;
+}
+.location{
+    width: 33%;
+    color: #fff;
+    text-align: center;
+}
+.location p{
+    line-height: 25px;
+}
+.links h1{
+    color: #fff;
+}
+.location h1{
+    color: #fff;
+}
+.links{
+    width: 33%;
+    color: #fff;
+    text-align: center;
+    
+}
+.links ul{
+    list-style: none;
+}
+.links a{
+    color: #fff;
+    text-decoration: none;
+    
+}
+.links a:hover{
+    
+    opacity: 0.4;
+}
+.anchor{
+    line-height: 25px;
+}
+.anchor a{
+    
+}
+.last{
+    color: #fff;
+    text-align: center;
+}
+.last p{
+    color:#fff;
+}
+i.fa.fa-facebook {
+    font-size: 30px;
+    padding: 10px;
+}
+i.fa.fa-instagram {
+    font-size: 30px;
+    padding: 10px;
+}
+.fa-instagram {
+    color: #fff;
+}
+.fa-instagram:hover{
+    opacity: 0.4;
+}
+.fa-facebook:hover {
+    opacity: 0.4;
+}
+.fa-facebook {
+    color: #fff;
+}
+input[type="text"] {
+    width: 250px;
+    padding: 6px;
+    border-radius: 10px;
+    margin: 6px;
+}
+button{
+    width: 250px;
+    padding: 6px;
+    border-radius: 10px;
+    margin: 6px;
+    background: #E94B3CFF;
+}
+button:hover{
+    background: #43680c;
+}
+ /*-----------account---------*/
+
+.account{
+    padding: 5px 0px;
+}
+.formcontainer{
+    background: #1b1b1b;
+    width: 300px;
+    height: 400px;
+    position: relative;
+    text-align: center;
+    padding: 20px 0;
+    margin: auto;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.1);
+
+}
+.row{
+    display: flex;
+}
+.one{
+    width: 40%;
+}
+.col-2{
+    width: 40%;
+}
+
+
+@media (max-width:940px){
+    .banner-image{
+    flex-direction: column;   
+    justify-content: center;
+    align-items: center;   
+    padding: 20px;
+    row-gap: 40px;
+    }
+    .txt p {
+        line-height: 1;
+        font-size: 17px;
+    }
+    .banner-image img{
+        width: 90%;
+    }
+    .banner-image  .txt{
+        width: 90%;
+        text-align: center;
+      
+    }
+    .footer {
+        display: flex;
+        flex-direction: column;
+        padding: 50px;
+        row-gap: 30px !important;
+    }
+    section.footer div {
+        flex: 1 0 100% !important;
+        width: 100% !important;
+    }
+    button{
+        width: 170px;
+    padding: 6px;
+    border-radius: 10px;
+    margin: 6px;
+    background: #E94B3CFF;
+    }
+    input[type="text"] {
+        width: 170px;
+    padding: 6px;
+    border-radius: 10px;
+    margin: 6px;
+    }
+
+    nav ul{
+       position: fixed;
+       top: 80px;
+       left: -100%;
+       background: #111;
+       height: 100vh;
+       width: 100%;
+       display: block;
+       transition: all 0.3s ease;
+    } 
+    #click:checked ~ ul{
+        left: 0%;
+    }
+    #click:checked ~ .menu-btn i::before{
+       content: "\f00d";
+    }
+    nav ul li{
+        margin: 40px 0;
+        text-align: center;
+    }
+    nav ul li a{
+        font-size: 20px;
+        display: block;
+    }
+
+    nav ul li a:hover,
+    nav ul li a.active
+    {
+        background: none;
+        color: cyan;
+    }
+    nav .menu-btn i{
+        display: block;
+    }
+
+}
